@@ -14,6 +14,9 @@ public class UI : MonoBehaviour
     [SerializeField] GameObject rightColumnPage1;
     [SerializeField] GameObject leftColumnPage2;
     [SerializeField] Button changePageBtn;
+    [SerializeField] Image currentSelectedCrop;
+    [SerializeField] Text currentModeLbl;
+    [SerializeField] Sprite[] crops;
 
     private GameManager gm;
 
@@ -36,6 +39,19 @@ public class UI : MonoBehaviour
     private void UpdateHeaderUI()
     {
         playerMoneyTxt.text = player.GetMoney().ToString() + " €";
+
+        if (gm.GetSelectedCrop() != null && gm.isPlanting)
+        {
+            currentModeLbl.text = "Mode : Plantation de ";
+            currentSelectedCrop.sprite = gm.GetSelectedCrop().GetComponent<Crop>().illustration;
+            currentSelectedCrop.color = new Color(1, 1, 1, 1);
+        } 
+        else
+        {
+            currentModeLbl.text = "Mode : Récolte";
+            currentSelectedCrop.sprite = null;
+            currentSelectedCrop.color = new Color(1, 1, 1, 0);
+        }
     }
 
     private void UpdateUIPlayerCrops()

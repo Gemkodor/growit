@@ -58,6 +58,7 @@ MonoBehaviour:
   minHarvestingRatio: 1
   maxHarvestingRatio: 3
   fullGrowth: 0
+  illustration: {fileID: 3212600592342627818, guid: 9cbb6f7a986305d4cb082b648950f6e2, type: 3}
 --- !u!212 &-7157911734996855070
 SpriteRenderer:
   m_ObjectHideFlags: 0

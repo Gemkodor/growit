@@ -11,6 +11,7 @@ public class Crop : MonoBehaviour
     int currentState = 0;
 
     public bool fullGrowth = false;
+    public Sprite illustration;
 
     // Start is called before the first frame update
     void Start()
