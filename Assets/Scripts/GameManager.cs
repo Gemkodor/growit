@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -38,12 +37,12 @@ public class GameManager : MonoBehaviour
     public Player player;
     public bool isPlanting = false;
 
-    private void Start()
+    private void Awake()
     {
         player = GetComponent<Player>();
-        cropPrices[(int)CROPS.TURNIP] = 5;
-        cropPrices[(int)CROPS.ROSE] = 5;
-        cropPrices[(int)CROPS.CUCUMBER] = 5;
+        cropPrices[(int)CROPS.TURNIP] = 150;
+        cropPrices[(int)CROPS.ROSE] = 250;
+        cropPrices[(int)CROPS.CUCUMBER] = 350;
         cropPrices[(int)CROPS.TULIP] = 5;
         cropPrices[(int)CROPS.TOMATO] = 5;
         cropPrices[(int)CROPS.MELON] = 5;
@@ -58,9 +57,9 @@ public class GameManager : MonoBehaviour
         cropPrices[(int)CROPS.POTATO] = 5;
         cropPrices[(int)CROPS.COFFEE] = 5;
         cropPrices[(int)CROPS.ORANGE] = 5;
-        cropPrices[(int)CROPS.AVOCADO] = 5;
-        cropPrices[(int)CROPS.CORN] = 5;
-        cropPrices[(int)CROPS.SUNFLOWER] = 5;
+        cropPrices[(int)CROPS.AVOCADO] = 350;
+        cropPrices[(int)CROPS.CORN] = 250;
+        cropPrices[(int)CROPS.SUNFLOWER] = 150;
     }
 
     public void SetPlanting(bool _isPlanting)

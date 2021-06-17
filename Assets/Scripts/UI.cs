@@ -57,6 +57,11 @@ public class UI : MonoBehaviour
         shopPanel.SetActive(true);
     }
 
+    public void CloseShop()
+    {
+        shopPanel.SetActive(false);
+    }
+
     public void DisplaySecondPage()
     {
         leftColumnPage1.SetActive(false);
