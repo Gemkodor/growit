@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 6793393}
   - component: {fileID: 6793392}
   - component: {fileID: 6793391}
+  - component: {fileID: 6793394}
   m_Layer: 5
   m_Name: LemonBtn
   m_TagString: Untagged
@@ -258,6 +259,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6793389}
   m_CullTransparentMesh: 1
+--- !u!114 &6793394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6793389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 7
 --- !u!1 &10976198
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +359,7 @@ GameObject:
   - component: {fileID: 42078416}
   - component: {fileID: 42078415}
   - component: {fileID: 42078414}
+  - component: {fileID: 42078417}
   m_Layer: 5
   m_Name: CornBtn
   m_TagString: Untagged
@@ -468,6 +483,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42078412}
   m_CullTransparentMesh: 1
+--- !u!114 &42078417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42078412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 18
 --- !u!1 &69895987 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8907239866118435350, guid: 260208b853d1f2c44b5043ac4562ddae, type: 3}
@@ -893,6 +921,7 @@ GameObject:
   - component: {fileID: 141198712}
   - component: {fileID: 141198711}
   - component: {fileID: 141198710}
+  - component: {fileID: 141198713}
   m_Layer: 5
   m_Name: AvocadoBtn
   m_TagString: Untagged
@@ -1016,6 +1045,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141198708}
   m_CullTransparentMesh: 1
+--- !u!114 &141198713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141198708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 17
 --- !u!1 &190859365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1907,6 +1949,7 @@ GameObject:
   - component: {fileID: 397114294}
   - component: {fileID: 397114293}
   - component: {fileID: 397114292}
+  - component: {fileID: 397114295}
   m_Layer: 5
   m_Name: TurnipBtn
   m_TagString: Untagged
@@ -2030,6 +2073,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397114290}
   m_CullTransparentMesh: 1
+--- !u!114 &397114295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397114290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 0
 --- !u!1001 &400265425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2183,6 +2239,7 @@ GameObject:
   - component: {fileID: 413960281}
   - component: {fileID: 413960280}
   - component: {fileID: 413960279}
+  - component: {fileID: 413960282}
   m_Layer: 5
   m_Name: TulipBtn
   m_TagString: Untagged
@@ -2306,6 +2363,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413960277}
   m_CullTransparentMesh: 1
+--- !u!114 &413960282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413960277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 3
 --- !u!1 &437019707
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,8 +2469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e870cf474aa7864e8b24f738bdb4f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 437019710}
-  shopPanel: {fileID: 1923489732}
   playerMoneyTxt: {fileID: 1006363949}
   cropCounterTxt:
   - {fileID: 1890706488}
@@ -2470,7 +2538,30 @@ MonoBehaviour:
   leftColumnPage2: {fileID: 640908329}
   changePageBtn: {fileID: 844479856}
   currentSelectedCrop: {fileID: 859683114}
-  crops: []
+  currentModeLbl: {fileID: 1134241175}
+  cropButtons:
+  - {fileID: 397114290}
+  - {fileID: 1215176291}
+  - {fileID: 1952542033}
+  - {fileID: 2024280274}
+  - {fileID: 1060109175}
+  - {fileID: 755014253}
+  - {fileID: 1400222043}
+  - {fileID: 881973462}
+  - {fileID: 675111798}
+  - {fileID: 141198708}
+  - {fileID: 1617954568}
+  - {fileID: 6793389}
+  - {fileID: 644297994}
+  - {fileID: 1859612397}
+  - {fileID: 529773182}
+  - {fileID: 1958050567}
+  - {fileID: 42078412}
+  - {fileID: 4903450114550102284}
+  - {fileID: 413960277}
+  - {fileID: 1926442732}
+  player: {fileID: 437019710}
+  shopPanel: {fileID: 1923489732}
 --- !u!1 &442958327
 GameObject:
   m_ObjectHideFlags: 0
@@ -2872,6 +2963,7 @@ GameObject:
   - component: {fileID: 529773186}
   - component: {fileID: 529773185}
   - component: {fileID: 529773184}
+  - component: {fileID: 529773187}
   m_Layer: 5
   m_Name: StrawberryBtn
   m_TagString: Untagged
@@ -2995,6 +3087,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529773182}
   m_CullTransparentMesh: 1
+--- !u!114 &529773187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529773182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 12
 --- !u!1001 &530227171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3364,6 +3469,7 @@ GameObject:
   - component: {fileID: 644297998}
   - component: {fileID: 644297997}
   - component: {fileID: 644297996}
+  - component: {fileID: 644297999}
   m_Layer: 5
   m_Name: PineappleBtn
   m_TagString: Untagged
@@ -3487,6 +3593,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644297994}
   m_CullTransparentMesh: 1
+--- !u!114 &644297999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644297994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 8
 --- !u!1 &651933963
 GameObject:
   m_ObjectHideFlags: 0
@@ -3597,6 +3716,7 @@ GameObject:
   - component: {fileID: 675111802}
   - component: {fileID: 675111801}
   - component: {fileID: 675111800}
+  - component: {fileID: 675111803}
   m_Layer: 5
   m_Name: CoffeeBtn
   m_TagString: Untagged
@@ -3720,6 +3840,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675111798}
   m_CullTransparentMesh: 1
+--- !u!114 &675111803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675111798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 15
 --- !u!1 &698772006
 GameObject:
   m_ObjectHideFlags: 0
@@ -4441,6 +4574,7 @@ GameObject:
   - component: {fileID: 755014257}
   - component: {fileID: 755014256}
   - component: {fileID: 755014255}
+  - component: {fileID: 755014258}
   m_Layer: 5
   m_Name: WheatBtn
   m_TagString: Untagged
@@ -4564,6 +4698,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755014253}
   m_CullTransparentMesh: 1
+--- !u!114 &755014258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755014253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 10
 --- !u!1 &768424851
 GameObject:
   m_ObjectHideFlags: 0
@@ -5232,6 +5379,7 @@ GameObject:
   - component: {fileID: 881973466}
   - component: {fileID: 881973465}
   - component: {fileID: 881973464}
+  - component: {fileID: 881973467}
   m_Layer: 5
   m_Name: PotatoBtn
   m_TagString: Untagged
@@ -5355,6 +5503,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881973462}
   m_CullTransparentMesh: 1
+--- !u!114 &881973467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881973462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 14
 --- !u!1 &905565782 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8756006564109019368, guid: 9fa0b5c766997e14abc802d06cad7e56, type: 3}
@@ -6026,6 +6187,7 @@ GameObject:
   - component: {fileID: 1060109179}
   - component: {fileID: 1060109178}
   - component: {fileID: 1060109177}
+  - component: {fileID: 1060109180}
   m_Layer: 5
   m_Name: MelonBtn
   m_TagString: Untagged
@@ -6149,6 +6311,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060109175}
   m_CullTransparentMesh: 1
+--- !u!114 &1060109180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060109175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 5
 --- !u!1 &1060788149 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8495497779023091895, guid: fe55761603289b34eb0a62095958f60d, type: 3}
@@ -6458,6 +6633,7 @@ GameObject:
   - component: {fileID: 1215176295}
   - component: {fileID: 1215176294}
   - component: {fileID: 1215176293}
+  - component: {fileID: 1215176296}
   m_Layer: 5
   m_Name: CucumberBtn
   m_TagString: Untagged
@@ -6581,6 +6757,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215176291}
   m_CullTransparentMesh: 1
+--- !u!114 &1215176296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215176291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 2
 --- !u!1 &1229773567
 GameObject:
   m_ObjectHideFlags: 0
@@ -7115,6 +7304,7 @@ GameObject:
   - component: {fileID: 1400222047}
   - component: {fileID: 1400222046}
   - component: {fileID: 1400222045}
+  - component: {fileID: 1400222048}
   m_Layer: 5
   m_Name: RiceBtn
   m_TagString: Untagged
@@ -7238,6 +7428,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400222043}
   m_CullTransparentMesh: 1
+--- !u!114 &1400222048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400222043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 9
 --- !u!1 &1436252525
 GameObject:
   m_ObjectHideFlags: 0
@@ -7951,6 +8154,7 @@ GameObject:
   - component: {fileID: 1617954572}
   - component: {fileID: 1617954571}
   - component: {fileID: 1617954570}
+  - component: {fileID: 1617954573}
   m_Layer: 5
   m_Name: TomatoBtn
   m_TagString: Untagged
@@ -8074,6 +8278,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617954568}
   m_CullTransparentMesh: 1
+--- !u!114 &1617954573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617954568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 4
 --- !u!114 &1627161848 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1966511570233792406, guid: d62a0309ff733de4bae56bc9fbdebbb0, type: 3}
@@ -9104,6 +9321,7 @@ GameObject:
   - component: {fileID: 1859612401}
   - component: {fileID: 1859612400}
   - component: {fileID: 1859612399}
+  - component: {fileID: 1859612402}
   m_Layer: 5
   m_Name: GrapesBtn
   m_TagString: Untagged
@@ -9227,6 +9445,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859612397}
   m_CullTransparentMesh: 1
+--- !u!114 &1859612402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859612397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 11
 --- !u!1 &1870268918
 GameObject:
   m_ObjectHideFlags: 0
@@ -9556,6 +9787,7 @@ GameObject:
   - component: {fileID: 1926442736}
   - component: {fileID: 1926442735}
   - component: {fileID: 1926442734}
+  - component: {fileID: 1926442737}
   m_Layer: 5
   m_Name: SunflowerBtn
   m_TagString: Untagged
@@ -9679,6 +9911,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926442732}
   m_CullTransparentMesh: 1
+--- !u!114 &1926442737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926442732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 19
 --- !u!1 &1947348471 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2404628643670221300, guid: 2e8ad7b40770ded4682bdf3c172f223b, type: 3}
@@ -9710,6 +9955,7 @@ GameObject:
   - component: {fileID: 1952542037}
   - component: {fileID: 1952542036}
   - component: {fileID: 1952542035}
+  - component: {fileID: 1952542038}
   m_Layer: 5
   m_Name: EggplantBtn
   m_TagString: Untagged
@@ -9833,6 +10079,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1952542033}
   m_CullTransparentMesh: 1
+--- !u!114 &1952542038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952542033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 6
 --- !u!1 &1958050567
 GameObject:
   m_ObjectHideFlags: 0
@@ -9845,6 +10104,7 @@ GameObject:
   - component: {fileID: 1958050571}
   - component: {fileID: 1958050570}
   - component: {fileID: 1958050569}
+  - component: {fileID: 1958050572}
   m_Layer: 5
   m_Name: OrangeBtn
   m_TagString: Untagged
@@ -9968,6 +10228,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958050567}
   m_CullTransparentMesh: 1
+--- !u!114 &1958050572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958050567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 16
 --- !u!1 &1963529572
 GameObject:
   m_ObjectHideFlags: 0
@@ -10296,6 +10569,7 @@ GameObject:
   - component: {fileID: 2024280278}
   - component: {fileID: 2024280277}
   - component: {fileID: 2024280276}
+  - component: {fileID: 2024280279}
   m_Layer: 5
   m_Name: CassavaBtn
   m_TagString: Untagged
@@ -10419,6 +10693,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024280274}
   m_CullTransparentMesh: 1
+--- !u!114 &2024280279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024280274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 13
 --- !u!1 &2034173168
 GameObject:
   m_ObjectHideFlags: 0
@@ -14554,6 +14841,7 @@ GameObject:
   - component: {fileID: 4903450114550102280}
   - component: {fileID: 4903450114550102283}
   - component: {fileID: 4903450114550102282}
+  - component: {fileID: 4903450114550102286}
   m_Layer: 5
   m_Name: RoseBtn
   m_TagString: Untagged
@@ -14583,6 +14871,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4903450114550102286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4903450114550102284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdb8ce8b6ad351449e356ceec30e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropId: 1
 --- !u!114 &4903450114908427164
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject shopPanel;
 
     public Dictionary<int, float> cropPrices = new Dictionary<int, float>();
+    public Dictionary<CROPS, bool> cropsAvailable = new Dictionary<CROPS, bool>();
     private CROPS currentSelectedPlant;
 
     public Player player;
@@ -40,6 +41,12 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         player = GetComponent<Player>();
+        SetCropPrices();
+        SetAvailableCrops();
+    }
+
+    private void SetCropPrices()
+    {
         cropPrices[(int)CROPS.TURNIP] = 150;
         cropPrices[(int)CROPS.ROSE] = 250;
         cropPrices[(int)CROPS.CUCUMBER] = 350;
@@ -60,6 +67,15 @@ public class GameManager : MonoBehaviour
         cropPrices[(int)CROPS.AVOCADO] = 350;
         cropPrices[(int)CROPS.CORN] = 250;
         cropPrices[(int)CROPS.SUNFLOWER] = 150;
+    }
+
+    private void SetAvailableCrops()
+    {
+        foreach (CROPS crop in Enum.GetValues(typeof(CROPS)))
+        {
+            cropsAvailable[crop] = false;
+        }
+        cropsAvailable[CROPS.TURNIP] = true;
     }
 
     public void SetPlanting(bool _isPlanting)

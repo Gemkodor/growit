@@ -4,19 +4,26 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
-    [SerializeField] Player player;
-    [SerializeField] GameObject shopPanel;
+    [Header("Labels")]
     [SerializeField] Text playerMoneyTxt;
     [SerializeField] Text[] cropCounterTxt;
     [SerializeField] Text[] playerCropQtyShopTxt;
     [SerializeField] Text[] cropPriceShopTxt;
+
+    [Header("Shop Interface")]
     [SerializeField] GameObject leftColumnPage1;
     [SerializeField] GameObject rightColumnPage1;
     [SerializeField] GameObject leftColumnPage2;
     [SerializeField] Button changePageBtn;
+
+    [Header("Header")]
     [SerializeField] Image currentSelectedCrop;
     [SerializeField] Text currentModeLbl;
-    [SerializeField] Sprite[] crops;
+
+    //[SerializeField] Sprite[] crops;
+    [SerializeField] GameObject[] cropButtons;
+    [SerializeField] Player player;
+    [SerializeField] GameObject shopPanel;
 
     private GameManager gm;
 
@@ -25,10 +32,21 @@ public class UI : MonoBehaviour
         gm = FindObjectOfType<GameManager>();
     }
 
+    private void DisplayUnlockedButtons()
+    {
+        foreach (GameObject cropButton in cropButtons)
+        {
+            int cropId = cropButton.GetComponent<CropButton>().GetCropId();
+            bool isUnlocked = gm.cropsAvailable[(GameManager.CROPS)cropId];
+            cropButton.SetActive(isUnlocked);
+        }
+    }
+
     void Update()
     {
         UpdateHeaderUI();
         UpdateUIPlayerCrops();
+        DisplayUnlockedButtons();
 
         if (Input.GetKeyDown(KeyCode.S))
         {
