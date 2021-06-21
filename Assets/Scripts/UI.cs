@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,7 +19,7 @@ public class UI : MonoBehaviour
 
     [Header("Header")]
     [SerializeField] Image currentSelectedCrop;
-    [SerializeField] Text currentModeLbl;
+    [SerializeField] TextMeshProUGUI currentModeLbl;
     [SerializeField] GameObject switchModeBtn;
 
     [SerializeField] GameObject[] cropButtons;
@@ -27,10 +28,15 @@ public class UI : MonoBehaviour
     [SerializeField] GameObject cropsTreePanel;
 
     private GameManager gm;
+    private Sprite rightBtn;
+    private Sprite leftBtn;
 
     private void Start()
     {
         gm = FindObjectOfType<GameManager>();
+
+        rightBtn = Resources.Load<Sprite>("Art/Sprites/UI/red_sliderRight");
+        leftBtn = Resources.Load<Sprite>("Art/Sprites/UI/red_sliderLeft");
     }
 
     private void DisplayUnlockedButtons()
@@ -48,18 +54,11 @@ public class UI : MonoBehaviour
         UpdateHeaderUI();
         UpdateUIPlayerCrops();
         DisplayUnlockedButtons();
+        switchModeBtn.SetActive(gm.isPlanting);
 
         if (Input.GetKeyDown(KeyCode.S))
         {
             shopPanel.SetActive(!shopPanel.activeInHierarchy);
-        }
-
-        if (gm.isPlanting)
-        {
-            switchModeBtn.SetActive(true);
-        } else
-        {
-            switchModeBtn.SetActive(false);
         }
     }
 
@@ -97,6 +96,8 @@ public class UI : MonoBehaviour
 
     public void OpenShop()
     {
+        CloseCropsTree();
+        DisplayFirstPage();
         shopPanel.SetActive(true);
     }
 
@@ -107,6 +108,7 @@ public class UI : MonoBehaviour
 
     public void OpenCropsTree()
     {
+        CloseShop();
         cropsTreePanel.SetActive(true);
     }
 
@@ -121,7 +123,7 @@ public class UI : MonoBehaviour
         rightColumnPage1.SetActive(false);
         leftColumnPage2.SetActive(true);
 
-        changePageBtn.GetComponentInChildren<Text>().text = "Page 1";
+        changePageBtn.GetComponentInChildren<Image>().sprite = leftBtn;
         changePageBtn.onClick.RemoveAllListeners();
         changePageBtn.onClick.AddListener(delegate { DisplayFirstPage(); });
     }
@@ -132,7 +134,7 @@ public class UI : MonoBehaviour
         rightColumnPage1.SetActive(true);
         leftColumnPage2.SetActive(false);
 
-        changePageBtn.GetComponentInChildren<Text>().text = "Page 2";
+        changePageBtn.GetComponentInChildren<Image>().sprite = rightBtn;
         changePageBtn.onClick.RemoveAllListeners();
         changePageBtn.onClick.AddListener(delegate { DisplaySecondPage(); });
     }

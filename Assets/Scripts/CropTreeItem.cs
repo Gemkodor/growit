@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,8 +10,10 @@ public class CropTreeItem : MonoBehaviour
     void Start()
     {
         gm = FindObjectOfType<GameManager>();
+
+        float price = gm.cropPrices[cropId] * gm.GetUnlockPriceFactor();
         priceLbl = transform.GetChild(1).GetComponent<Text>();
-        priceLbl.text = gm.cropPrices[cropId].ToString() + " €";
+        priceLbl.text = price.ToString() + " €";
     }
 
     void Update()

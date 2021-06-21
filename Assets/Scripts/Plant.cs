@@ -13,11 +13,6 @@ public class Plant : MonoBehaviour
         player = FindObjectOfType<Player>();
     }
 
-    void Update()
-    {
-        
-    }
-
     private void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0))

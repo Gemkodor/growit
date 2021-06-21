@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Dictionary<string, int> crops = new Dictionary<string, int>();
-    private float money = 350;
+    private float money = 0;
 
     void Start()
     {
