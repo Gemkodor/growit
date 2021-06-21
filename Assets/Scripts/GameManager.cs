@@ -47,26 +47,26 @@ public class GameManager : MonoBehaviour
 
     private void SetCropPrices()
     {
-        cropPrices[(int)CROPS.TURNIP] = 150;
-        cropPrices[(int)CROPS.ROSE] = 250;
-        cropPrices[(int)CROPS.CUCUMBER] = 350;
-        cropPrices[(int)CROPS.TULIP] = 5;
-        cropPrices[(int)CROPS.TOMATO] = 5;
-        cropPrices[(int)CROPS.MELON] = 5;
-        cropPrices[(int)CROPS.EGGPLANT] = 5;
-        cropPrices[(int)CROPS.LEMON] = 5;
-        cropPrices[(int)CROPS.PINEAPPLE] = 5;
-        cropPrices[(int)CROPS.RICE] = 5;
-        cropPrices[(int)CROPS.WHEAT] = 5;
-        cropPrices[(int)CROPS.GRAPES] = 5;
-        cropPrices[(int)CROPS.STRAWBERRY] = 5;
-        cropPrices[(int)CROPS.CASSAVA] = 5;
-        cropPrices[(int)CROPS.POTATO] = 5;
-        cropPrices[(int)CROPS.COFFEE] = 5;
-        cropPrices[(int)CROPS.ORANGE] = 5;
-        cropPrices[(int)CROPS.AVOCADO] = 350;
-        cropPrices[(int)CROPS.CORN] = 250;
-        cropPrices[(int)CROPS.SUNFLOWER] = 150;
+        cropPrices[(int)CROPS.TURNIP] = 13;
+        cropPrices[(int)CROPS.ROSE] = 21;
+        cropPrices[(int)CROPS.CUCUMBER] = 34;
+        cropPrices[(int)CROPS.TULIP] = 55;
+        cropPrices[(int)CROPS.TOMATO] = 89;
+        cropPrices[(int)CROPS.MELON] = 144;
+        cropPrices[(int)CROPS.EGGPLANT] = 233;
+        cropPrices[(int)CROPS.LEMON] = 377;
+        cropPrices[(int)CROPS.PINEAPPLE] = 610;
+        cropPrices[(int)CROPS.RICE] = 987;
+        cropPrices[(int)CROPS.WHEAT] = 1597;
+        cropPrices[(int)CROPS.GRAPES] = 2584;
+        cropPrices[(int)CROPS.STRAWBERRY] = 4181;
+        cropPrices[(int)CROPS.CASSAVA] = 6765;
+        cropPrices[(int)CROPS.POTATO] = 10946;
+        cropPrices[(int)CROPS.COFFEE] = 17711;
+        cropPrices[(int)CROPS.ORANGE] = 28657;
+        cropPrices[(int)CROPS.AVOCADO] = 46368;
+        cropPrices[(int)CROPS.CORN] = 75025;
+        cropPrices[(int)CROPS.SUNFLOWER] = 121393;
     }
 
     private void SetAvailableCrops()
@@ -78,9 +78,23 @@ public class GameManager : MonoBehaviour
         cropsAvailable[CROPS.TURNIP] = true;
     }
 
+    public void UnlockCrop(int cropId)
+    {
+        if (player.GetMoney() >= cropPrices[cropId])
+        {
+            cropsAvailable[(CROPS)cropId] = true;
+            player.SetMoney(player.GetMoney() - cropPrices[cropId]);
+        }
+    }
+
     public void SetPlanting(bool _isPlanting)
     {
         isPlanting = _isPlanting;
+    }
+
+    public void SwitchMode()
+    {
+        isPlanting = !isPlanting;
     }
 
     public void SelectCrop(int cropToSelect)

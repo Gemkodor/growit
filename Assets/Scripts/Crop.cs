@@ -13,13 +13,11 @@ public class Crop : MonoBehaviour
     public bool fullGrowth = false;
     public Sprite illustration;
 
-    // Start is called before the first frame update
     void Start()
     {
         SetFirstState();
     }
 
-    // Update is called once per frame
     void Update()
     {
         lifeTime += Time.deltaTime;

@@ -7,14 +7,12 @@ public class Plant : MonoBehaviour
     GameObject plantedCrop;
     Player player;
 
-    // Start is called before the first frame update
     void Start()
     {
         gm = FindObjectOfType<GameManager>();
         player = FindObjectOfType<Player>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         

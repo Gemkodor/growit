@@ -19,11 +19,12 @@ public class UI : MonoBehaviour
     [Header("Header")]
     [SerializeField] Image currentSelectedCrop;
     [SerializeField] Text currentModeLbl;
+    [SerializeField] GameObject switchModeBtn;
 
-    //[SerializeField] Sprite[] crops;
     [SerializeField] GameObject[] cropButtons;
     [SerializeField] Player player;
     [SerializeField] GameObject shopPanel;
+    [SerializeField] GameObject cropsTreePanel;
 
     private GameManager gm;
 
@@ -51,6 +52,14 @@ public class UI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             shopPanel.SetActive(!shopPanel.activeInHierarchy);
+        }
+
+        if (gm.isPlanting)
+        {
+            switchModeBtn.SetActive(true);
+        } else
+        {
+            switchModeBtn.SetActive(false);
         }
     }
 
@@ -94,6 +103,16 @@ public class UI : MonoBehaviour
     public void CloseShop()
     {
         shopPanel.SetActive(false);
+    }
+
+    public void OpenCropsTree()
+    {
+        cropsTreePanel.SetActive(true);
+    }
+
+    public void CloseCropsTree()
+    {
+        cropsTreePanel.SetActive(false);
     }
 
     public void DisplaySecondPage()

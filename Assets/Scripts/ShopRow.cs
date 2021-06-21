@@ -16,18 +16,10 @@ public class ShopRow : MonoBehaviour
         buttons = GetComponentsInChildren<Button>();
         gm = FindObjectOfType<GameManager>();
         cropPrice = gm.cropPrices[cropId];
-        DisplayIfUnlocked();
-    }
-
-    private void DisplayIfUnlocked()
-    {
-        bool isUnlocked = gm.cropsAvailable[(GameManager.CROPS)cropId];
-        gameObject.SetActive(isUnlocked);
     }
 
     void Update()
     {
-        DisplayIfUnlocked();
         SetButtonsActivity();
     }
 
