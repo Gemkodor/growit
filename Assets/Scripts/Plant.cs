@@ -43,4 +43,9 @@ public class Plant : MonoBehaviour
             }
         }
     }
+
+    public bool isPlantOccupied()
+    {
+        return plantedCrop != null;
+    }
 }

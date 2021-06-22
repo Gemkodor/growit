@@ -36,10 +36,8 @@ public class ShopRow : MonoBehaviour
                     buttons[i].interactable = player.GetMoney() >= cropPrice * 10;
                     break;
                 case "SellSingleCrop":
+                case "SellAllCrops":
                     buttons[i].interactable = int.Parse(playerCropQty.text) >= 1;
-                    break;
-                case "SellTenCrops":
-                    buttons[i].interactable = int.Parse(playerCropQty.text) >= 10;
                     break;
             }
         }

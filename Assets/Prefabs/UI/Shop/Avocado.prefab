@@ -702,7 +702,7 @@ GameObject:
   - component: {fileID: 4193042612017442839}
   - component: {fileID: 4193042612017442840}
   m_Layer: 5
-  m_Name: SellTenCrops
+  m_Name: SellAllCrops
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1033,7 +1033,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Vendre 10
+  m_Text: Vendre tout
 --- !u!1 &4193042612567065391
 GameObject:
   m_ObjectHideFlags: 0

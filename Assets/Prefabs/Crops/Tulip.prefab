@@ -51,12 +51,12 @@ MonoBehaviour:
   - {fileID: -9043567502234848336, guid: 9cbb6f7a986305d4cb082b648950f6e2, type: 3}
   - {fileID: 15454569707840255, guid: 9cbb6f7a986305d4cb082b648950f6e2, type: 3}
   steps:
-  - 5
-  - 10
   - 15
-  - 20
-  minHarvestingRatio: 2
-  maxHarvestingRatio: 4
+  - 30
+  - 45
+  - 60
+  minHarvestingRatio: 1
+  maxHarvestingRatio: 3
   fullGrowth: 0
   illustration: {fileID: -4828944696979866993, guid: 9cbb6f7a986305d4cb082b648950f6e2, type: 3}
 --- !u!212 &-4501457852086815285

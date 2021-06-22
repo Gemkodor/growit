@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     public Dictionary<int, float> cropPrices = new Dictionary<int, float>();
     public Dictionary<CROPS, bool> cropsAvailable = new Dictionary<CROPS, bool>();
     private CROPS currentSelectedPlant;
-    private int priceFactorForUnlock = 5;
+    private int priceFactorForUnlock = 3;
 
     private void Awake()
     {
@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
 
     private void SetCropPrices()
     {
-        /*cropPrices[(int)CROPS.TURNIP] = 13;
+        cropPrices[(int)CROPS.TURNIP] = 13;
         cropPrices[(int)CROPS.ROSE] = 21;
         cropPrices[(int)CROPS.CUCUMBER] = 34;
         cropPrices[(int)CROPS.TULIP] = 55;
@@ -66,28 +66,7 @@ public class GameManager : MonoBehaviour
         cropPrices[(int)CROPS.ORANGE] = 28657;
         cropPrices[(int)CROPS.AVOCADO] = 46368;
         cropPrices[(int)CROPS.CORN] = 75025;
-        cropPrices[(int)CROPS.SUNFLOWER] = 121393;*/
-
-        cropPrices[(int)CROPS.TURNIP] = 13;
-        cropPrices[(int)CROPS.ROSE] = 34;
-        cropPrices[(int)CROPS.CUCUMBER] = 89;
-        cropPrices[(int)CROPS.TULIP] = 233;
-        cropPrices[(int)CROPS.TOMATO] = 610;
-        cropPrices[(int)CROPS.MELON] = 1597;
-        cropPrices[(int)CROPS.EGGPLANT] = 233;
-        cropPrices[(int)CROPS.LEMON] = 377;
-        cropPrices[(int)CROPS.PINEAPPLE] = 610;
-        cropPrices[(int)CROPS.RICE] = 987;
-        cropPrices[(int)CROPS.WHEAT] = 1597;
-        cropPrices[(int)CROPS.GRAPES] = 4181;
-        cropPrices[(int)CROPS.STRAWBERRY] = 10946;
-        cropPrices[(int)CROPS.CASSAVA] = 17711;
-        cropPrices[(int)CROPS.POTATO] = 28657;
-        cropPrices[(int)CROPS.COFFEE] = 46368;
-        cropPrices[(int)CROPS.ORANGE] = 75025;
-        cropPrices[(int)CROPS.AVOCADO] = 121393;
-        cropPrices[(int)CROPS.CORN] = 832040;
-        cropPrices[(int)CROPS.SUNFLOWER] = 9227465;
+        cropPrices[(int)CROPS.SUNFLOWER] = 121393;
     }
 
     private void SetAvailableCrops()
@@ -182,6 +161,11 @@ public class GameManager : MonoBehaviour
     public void SellTenCrops(int cropId)
     {
         SellCrop(cropId, 10);
+    }
+
+    public void SellAllCrops(int cropId)
+    {
+        SellCrop(cropId, player.crops[Enum.GetName(typeof(CROPS), cropId)]);
     }
 
     public int GetUnlockPriceFactor()
