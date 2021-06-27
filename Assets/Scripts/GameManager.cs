@@ -45,6 +45,40 @@ public class GameManager : MonoBehaviour
         SetAvailableCrops();
     }
 
+    public void SaveGame()
+    {
+        PlayerPrefs.SetFloat("playerMoney", player.GetMoney());
+
+        foreach (CROPS crop in Enum.GetValues(typeof(CROPS)))
+        {
+            string text = "locked";
+            if (cropsAvailable[crop])
+            {
+                text = "unlock";
+            }
+            PlayerPrefs.SetString(crop.ToString(), text);
+
+            PlayerPrefs.SetInt(crop.ToString() + "Qty", player.crops[crop.ToString()]);
+        }
+    }
+
+    public void LoadGame()
+    {
+        player.SetMoney(PlayerPrefs.GetFloat("playerMoney"));
+
+        foreach (CROPS crop in Enum.GetValues(typeof(CROPS)))
+        {
+            bool unlocked = PlayerPrefs.GetString(crop.ToString()) == "unlock";
+            cropsAvailable[crop] = unlocked;
+
+            int qty = PlayerPrefs.GetInt(crop.ToString() + "Qty", -1);
+            if (qty > -1)
+            {
+                player.crops[crop.ToString()] = qty;
+            }
+        }
+    }
+
     private void SetCropPrices()
     {
         cropPrices[(int)CROPS.TURNIP] = 13;

@@ -49,6 +49,6 @@ public class Crop : MonoBehaviour
 
     public int GetHarvestingQty()
     {
-        return Random.Range(minHarvestingRatio, maxHarvestingRatio);
+        return Random.Range(minHarvestingRatio, maxHarvestingRatio + 1);
     }
 }
