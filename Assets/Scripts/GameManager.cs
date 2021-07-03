@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject[] cropsPrefabs;
     [SerializeField] GameObject shopPanel;
+    [SerializeField] GameObject loadGamePanel;
+    [SerializeField] Text loadGameStr;
 
     public Player player;
     public bool isPlanting = false;
@@ -47,6 +50,7 @@ public class GameManager : MonoBehaviour
 
     public void SaveGame()
     {
+        PlayerPrefs.SetInt("playerSaved", 1);
         PlayerPrefs.SetFloat("playerMoney", player.GetMoney());
 
         foreach (CROPS crop in Enum.GetValues(typeof(CROPS)))
@@ -62,21 +66,41 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void OpenLoadGamePanel()
+    {
+        loadGamePanel.SetActive(true);
+    }
+
+    public void CloseLoadGamePanel()
+    {
+        loadGamePanel.SetActive(false);
+    }
+
     public void LoadGame()
     {
-        player.SetMoney(PlayerPrefs.GetFloat("playerMoney"));
-
-        foreach (CROPS crop in Enum.GetValues(typeof(CROPS)))
+        if (PlayerPrefs.GetInt("playerSaved") == 1)
         {
-            bool unlocked = PlayerPrefs.GetString(crop.ToString()) == "unlock";
-            cropsAvailable[crop] = unlocked;
+            Debug.Log("Load game"); 
+            player.SetMoney(PlayerPrefs.GetFloat("playerMoney"));
 
-            int qty = PlayerPrefs.GetInt(crop.ToString() + "Qty", -1);
-            if (qty > -1)
+            foreach (CROPS crop in Enum.GetValues(typeof(CROPS)))
             {
-                player.crops[crop.ToString()] = qty;
+                bool unlocked = PlayerPrefs.GetString(crop.ToString()) == "unlock";
+                cropsAvailable[crop] = unlocked;
+
+                int qty = PlayerPrefs.GetInt(crop.ToString() + "Qty", -1);
+                if (qty > -1)
+                {
+                    player.crops[crop.ToString()] = qty;
+                }
             }
+        } 
+        else
+        {
+            Debug.Log("No loading");
         }
+
+        loadGamePanel.SetActive(false);
     }
 
     private void SetCropPrices()
